@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Griffy', cursive;
+}
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /*background: #C0D6E9;*/
+  background: linear-gradient(#333,#000);
+  overflow: hidden;
+}
+/* falling leaves*/
+section .set{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+section .set .cont{
+  position: absolute;
+  display: block;
+}
+section .set .cont img{
+  width: 50%;
+  height: 50%;
+}
+section .set .cont:nth-child(1){
+  left: 20%;
+  animation: animate 15s linear infinite;
+  animation-delay: -7s;
+  
+}
+section .set .cont:nth-child(2){
+  left: 50%;
+  animation: animate 20s linear infinite;
+  animation-delay: -5s;
+  
+}
+section .set .cont:nth-child(3){
+  left: 70%;
+  animation: animate 15s linear infinite;
+  animation-delay: 0s;
+  
+}
+section .set .cont:nth-child(4){
+  left: 0%;
+  animation: animate 15s linear infinite;
+  animation-delay: -5s;
+  
+}
+.set2{
+  transform: scale(2) rotateY(180deg);
+  filter: blur(2px);
+}
+
+@keyframes animate{
+  0%{
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg)
+    
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40%{
+    transform: translateX(-20px) rotate(90deg)
+  }
+  60%{
+    transform: translateX(20px) rotate(180deg);
+  }
+  80%{
+    transform: translateX(-20px) rotate(0deg);
+    
+  }
+  100%{
+    top: 110%;
+    transform: translateX(20px) rotate(225deg);
+  }
+}
+
+/*box container */
+.box{
+  position: relative;
+  z-index: 1000;
+}
+.container{
+  position: relative;
+   width: 320px;
+  background: #fff;
+  background: conic-gradient(
+     #fd004c,
+     #fe9000,
+     #fff020,
+     #3edf4b,
+     #3363ff,
+     #b102b7,
+     #fd004c
+  
+  );
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  
+}
+
+/*calendar classes*/
+#dycalendar{
+  width: 350px;
+  padding: 10px;
+}
+
+#dycalendar table{
+  width: 100%;
+  margin-top: 40px;
+  border-spacing: 5px;
+}
+#dycalendar table tr:nth-child(1) td{
+  background-color: #F97400;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  
+}
+
+#dycalendar table td{
+  color: #111;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10% 20% 10% 20%;
+  transition: all 0.2s ease-in-out;
+}
+#dycalendar table td.kk{
+  color: #fff;
+}
+#dycalendar table td:hover{
+  background-color: #3C333F;
+  color: #fff !important;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date{
+  background-color: #3C333F;
+  color: #fff !important;
+  
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
+  background: #0085F9;
+  color: #fff;
+  width: 44px;
+  left: 4px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn{
+  background: #0085F9;
+  color: #fff;
+  width: 44px;
+  right: 4px;
+  height: 38px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.dycalendar-month-container .dycalendar-span-month-year{
+  color: #111;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'Rampart One', cursive;
+  text-transform: uppercase;
+}
+  
+  
+  
+  
